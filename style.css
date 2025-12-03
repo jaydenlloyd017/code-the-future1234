@@ -32,7 +32,7 @@ nav {
 
 .hero-section,
 .projects-section {
-  padding-top: 12vh; /* same as nav height */
+  padding-top: 13vh;
 }
 
 span {
@@ -176,7 +176,8 @@ p {
 }
 
 .project-img {
-  width: 110%;
+  width: 100%; /* fit inside card */
+  max-width: 300px; /* respond gracefully */
   height: auto;
   border-radius: 5%;
 }
@@ -190,10 +191,14 @@ p {
   flex-direction: column;
   padding-top: 60px;
   margin: 50px;
-  width: 30%;
   align-items: center;
   box-shadow: 5px;
   border: 1px solid black;
+  width: clamp(250px, 30%, 350px);
+
+  padding: 20px;
+  width: clamp(250px, 30%, 350px);
+  min-height: 350px;
 }
 
 .buttons-div {
@@ -220,9 +225,10 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ;
+
   margin: 20px;
   border-radius: 30px;
+  flex-wrap: wrap;
 }
 
 h3 {
@@ -242,16 +248,18 @@ h3 {
   background-color: white;
   margin: 20px;
   border-radius: 20px;
-  width: 25%;
   display: flex;
-  height: 40%;
+  height: 50%;
   flex-direction: column;
   justify-content: center;
+  width: min(500px, 90%);
+  margin: 20px auto;
+  align-items: center;
 }
 
 .input input {
   height: 40px;
-  width: 150px;
+  width: 100%;
   margin: 20px;
 }
 
@@ -268,4 +276,83 @@ input {
 
 .input button {
   margin: 20px;
+}
+
+@media (max-width: 1000px) {
+  .projects {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .project-card {
+    width: 80%;
+    margin: 20px 0;
+    min-height: 350px;
+    width: clamp(350px, 30%, 400px);
+  }
+  .projects-section {
+    margin-bottom: 150px;
+  }
+
+  .project-card {
+    min-height: 200px;
+  }
+
+  .hero-section {
+    padding-bottom: 200px;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero-section {
+    padding-bottom: 100px;
+  }
+  nav {
+    display: none;
+  }
+  .projects {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .project-card {
+    width: 80%;
+    margin: 20px 0;
+    min-height: 200px;
+    width: clamp(350px, 30%, 400px);
+  }
+
+  .hero-section-container {
+    height: 30vh;
+    display: block;
+    height: auto;
+    margin-bottom: 200px;
+    margin-top: -200px;
+  }
+
+  .hero-text-container,
+  .hero-img-container {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .projects-section {
+    margin-bottom: 150px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .project-card {
+    height: 400px;
+  }
+
+  .hero-text {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

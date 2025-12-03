@@ -7,22 +7,21 @@
     <title>Website</title>
   </head>
   <body>
-    <section id="hero">
-      <nav>
-        <div class="nav-div">
-          <div class="logo">Jayden <span>Lloyd</span></div>
-          <div class="links">
-            <ul>
-              <li><a>Home</a></li>
-              <li><a>About</a></li>
-              <li><a>Services</a></li>
-            </ul>
-            <button>Contact</button>
-          </div>
+    <div class="background-fixed"></div>
+    <nav>
+      <div class="nav-div">
+        <div class="logo">Jayden <span>Lloyd</span></div>
+        <div class="links">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+          </ul>
+          <a href="#contact"><button>Contact</button></a>
         </div>
-      </nav>
-    </section>
-    <section class="hero-section">
+      </div>
+    </nav>
+    <section class="hero-section" id="home">
+      >
       <div class="hero-section-container">
         <div class="hero-text-container">
           <h1 class="job-title">Junior <span>Developer</span></h1>
@@ -33,13 +32,82 @@
           </p>
           <div>
             <button id="contact-button" class="hero-button">Contact</button>
-            <button id="linkedin-button" class="hero-button">Linkedin</button>
+            <a href="https://www.linkedin.com/in/jayden-lloyd-aaa844395/"
+              ><button id="linkedin-button" class="hero-button">
+                Linkedin
+              </button></a
+            >
           </div>
         </div>
-        <div class="hero-img-container">
-          <img src="./work-from-home-business.png" />
+        <div class="hero-img-container"></div>
+      </div>
+    </section>
+    <section class="projects-section" id="projects">
+      <div style="text-align: center">
+        <h1>Projects</h1>
+      </div>
+      <div class="projects">
+        <div class="project-card">
+          <h3>Full Stack Website</h3>
+          <img
+            src="./Screenshot 2025-12-03 at 12.12.32.png"
+            class="project-img"
+          />
+
+          <div class="buttons-div">
+            <a href="https://github.com/DB-JL/Full-Stack-Car-Rental"
+              ><button class="project-buttons">Github Repo</button></a
+            >
+            <a href="https://carxp.decbr.com/"
+              ><button class="project-buttons">View Project</button></a
+            >
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Full Stack Website</h3>
+          <img
+            src="./Screenshot 2025-12-03 at 12.12.32.png"
+            class="project-img"
+          />
+          <div class="buttons-div">
+            <a href="https://github.com/DB-JL/Full-Stack-Car-Rental"
+              ><button class="project-buttons">Github Repo</button></a
+            >
+            <a href="https://carxp.decbr.com/"
+              ><button class="project-buttons">View Project</button></a
+            >
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Full Stack Website</h3>
+          <img
+            src="./Screenshot 2025-12-03 at 12.12.32.png"
+            class="project-img"
+          />
+          <div class="buttons-div">
+            <a href="https://github.com/DB-JL/Full-Stack-Car-Rental"
+              ><button class="project-buttons">Github Repo</button></a
+            >
+            <a href="https://carxp.decbr.com/"
+              ><button class="project-buttons">View Project</button></a
+            >
+          </div>
         </div>
       </div>
+    </section>
+    <section class="contact-section" id="contact">
+      <h1>Contact Me</h1>
+
+      <form class="input">
+        <input type="text" id="input-name" placeholder="Enter your name" />
+        <input type="text" placeholder="Enter your email" />
+        <input type="text" placeholder="Enter Subject of Contact" />
+
+        <div class="submit"></div>
+        <button id="submit-name">Submit</button>
+      </form>
     </section>
   </body>
 </html>
